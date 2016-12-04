@@ -1,0 +1,11 @@
+.mainContent {
+    height:100%;
+    background-image: url("/img/IMG_0101.JPG");
+    background-size: cover;
+}
+
+.enterBar {
+    height: unset;
+    width: 50%;
+    margin: 0 auto;
+}

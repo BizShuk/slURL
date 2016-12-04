@@ -1,0 +1,6 @@
+setting.js
+lib
+*.sw[op]
+node_modules
+npm_package.sh
+*.sql
