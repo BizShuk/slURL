@@ -43,7 +43,7 @@ class Enterbar extends React.Component {
     shortURL(){
         var _this = this;
         $.ajax({
-            url:'http://slURL.t.shuk.info/url',
+            url:'http://slURL.shuk.info/url',
             type: 'post',
             data: {
                 url:this.state.originURL

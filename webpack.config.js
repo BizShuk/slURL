@@ -22,7 +22,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {   test: /\.js[x]?$/,  exclude: ['node_modules'],  loader: 'babel' ,
+            {   test: /\.js[x]?$/,  exclude: ['node_modules'],  loader: 'babel-loader' ,
                 query:{ presets:['es2015','react'] }
             },
             {
@@ -35,11 +35,15 @@ module.exports = {
 
     },
     resolve: {
+        root: path.resolve(__dirname),
+        modulesDirectories: ['node_modules'],
         extensions: ['','.js','.jsx','.json']
 //        alias: {
 //            'react': react_path
 //        }
     },
+    resolveLoader: {
+        root: path.join(__dirname,'node_modules')
+    },
     plugins: [] // [list of plugin](https://webpack.js.org/plugins)
 }
-

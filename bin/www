@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('slurl:server');
 var http = require('http');
 var setting = require('../setting');
+var process = require('process');
+var fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
@@ -15,6 +17,16 @@ var setting = require('../setting');
 
 var port = normalizePort(setting.port || '3000');
 app.set('port', port);
+
+
+/**
+ * output PID
+ */
+
+fs.open('log/server.pid','w+', (err,fd)=>{
+    fs.write(fd,process.pid);
+});
+
 
 /**
  * Create HTTP server.
